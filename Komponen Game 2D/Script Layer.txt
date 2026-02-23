@@ -1,0 +1,57 @@
+stop();
+
+char.onEnterFrame = function() {
+	if (Key.isDown(Key.RIGHT)) {
+		this._xscale = 100;
+		this.gotoAndStop("lari");}
+		
+	if (Key.isDown(Key.LEFT)) {
+		this._xscale = -100;
+		this.gotoAndStop("lari");} 
+		
+	if (Key.isDown(Key.UP)) {
+		this.gotoAndStop("lompat");}  
+	
+			
+};
+
+poin.onEnterFrame = function(){
+	if (coin.hitTest(char)) {
+		coin.play();
+		this.score+=1;};
+	
+	if (coin2.hitTest(char)) {
+		coin2.play();
+		this.score+=1;}
+};
+
+star.onEnterFrame = function(){
+	
+	if (char.hitTest(rb)) {
+		this.nextFrame();
+	
+		_root.char._x = charX = 40
+		_root.char._y = charY = 100
+		}	
+		
+	if (char.hitTest(rb2)) {
+		this.nextFrame();
+	
+		_root.char._x = charX = 40
+		_root.char._y = charY = 100
+		}	
+	
+	if (char.hitTest(rb3)) {
+		this.nextFrame();
+	
+		_root.char._x = charX = 40
+		_root.char._y = charY = 100
+		}	
+};
+
+finish.onEnterFrame=function(){
+if (finish.hitTest(char)){
+	gotoAndStop("Scene 2", 1)
+};}
+
+
