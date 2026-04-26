@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flash Coin Rush</title>
+
+  <!-- Ruffle Flash Emulator -->
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = {
+      autoplay: "on",
+      unmuteOverlay: "hidden"
+    };
+  </script>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+
+<body style="margin:0; background:#111; display:flex; justify-content:center; align-items:center; height:100vh;">
+
+  <div>
+    <h2 style="color:white; text-align:center;">🎮 Coin Rush Game</h2>
+    <embed src="uts.swf" width="800" height="600">
+  </div>
+
+</body>
+</html>
